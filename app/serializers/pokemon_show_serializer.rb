@@ -1,3 +1,5 @@
 class PokemonShowSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :body, :current_user, :photo_path
+  
+  has_many :reviews
 end
