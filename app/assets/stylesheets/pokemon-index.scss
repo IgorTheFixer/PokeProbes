@@ -1,0 +1,35 @@
+@import 'color';
+
+.pokemon-card {
+  border: 5px solid $ac-green !important;
+  border-radius: 15px !important;
+  transition: border 0.1s ease-in;
+  cursor: pointer;
+  height: 20em !important;
+  text-align: center;
+
+  &:hover {
+    border: 8px solid $ac-yellow !important;
+  }
+}
+
+.pokemon-card-image {
+  max-height: 15em;
+}
+
+.pokemon-card-section {
+  background-color: $background !important;
+  color: $ac-brown !important;
+}
+
+.index-chimcar {
+  max-height: 15em;
+  display: block;
+  margin: 0 auto;
+}
+
+.new-pokemons {
+  margin: 0 auto;
+  display: block;
+  padding: 1em;
+}
