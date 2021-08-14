@@ -1,0 +1,35 @@
+@import 'color';
+
+@font-face {
+  font-family: 'FinkHeavy';    
+  src: asset-path(FinkHeavy) format("opentype");
+  src: font_url('FinkHeavy.otf'); 
+}
+
+h1, h2, h3 {
+  font-family: 'FinkHeavy';
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text-color;
+  background-color: $background;
+}
+
+nav a {
+  color: $ac-yellow;
+  transition: color 0.1s ease-in;
+
+  &:hover {
+    color: $ac-green !important;
+  }
+}
+
+.top-bar, .top-bar ul {
+  background-color: $text-color;
+  margin-bottom: 2em;
+}
+
+.pikachu-icon {
+  max-width: 2em;
+}
