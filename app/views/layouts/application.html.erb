@@ -9,8 +9,10 @@
 <body>
   
   <nav class="top-bar">
-    <h1><a href="/">PokeReview</a></h1>
-
+    <h1>
+      <%= image_tag("pikachu-navbar.png", :class => "pikachu-icon", :alt => "pikachu") %>
+      <a href="/">PokeReview</a>
+    </h1>
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
@@ -28,9 +30,7 @@
       <%= value %>
     </div>
   <%- end -%>
-
   <%= yield %>
-
   <%= javascript_include_tag 'application' %>
   
   <%- if Rails.env.development? || Rails.env.test? -%> 
