@@ -45,8 +45,8 @@ const PokemonIndex = props => {
           <img src={IndexChimchar} alt="chimchar" className="index-chimchar" onClick={() => audio.play()}/>
         </div>
         <div className="cell small-6 medium-8">
-          <h1>Welcome to Blathers' Blabber!</h1>
-          <h3>The best animal ratings in town.</h3>
+          <h1>Welcome to Poke Reviews!</h1>
+          <h3>The best Pokemon ratings around!</h3>
         </div>
       </div>
       <div className="grid-x grid-margin-x">
