@@ -42,7 +42,8 @@ const PokemonIndex = props => {
     <div className="grid-container">
       <div className="grid-x grid-margin-x">
         <div className="cell small-6 medium-4">
-          <img src={IndexChimchar} alt="chimchar" className="index-chimchar" onClick={() => audio.play()}/>
+          <img src={IndexChimchar} alt="chimchar" className="index-chimchar"  
+          onClick={() => audio.play()}/>
         </div>
         <div className="cell small-6 medium-8">
           <h1>Welcome to Poke Probes</h1>
