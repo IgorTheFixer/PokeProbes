@@ -8,7 +8,7 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/animals/:id" component={PokemonShow}/>
+        <Route exact path="/pokemons/:id" component={PokemonShow}/>
         <Route path="/" component={PokemonIndex}/>
       </Switch>
     </BrowserRouter>
