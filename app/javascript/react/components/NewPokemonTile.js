@@ -10,7 +10,7 @@ const NewPokemonTile = () => {
           src={Pokemons} 
           alt="pokemon image"/>
           <div className="card-section pokemon-card-section">
-            <h3>Your New Pokemon</h3>
+            <h3>New Pokemon?</h3>
           </div>
         </div>
       </a>
