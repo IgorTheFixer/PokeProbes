@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PokemonReviewForm from "./PokemonReviewForm"
 import ReviewList from "./reviews/ReviewList"
 import _ from "lodash"
-//import MysteryPokemon from "../../../assets/images/mystery-pokemon.jpg"
+import MysteryPokemon from "../../../assets/images/mystery-pokemon.jpg"
 
 const PokemonShow = props => {
   const [pokemon, setPokemon] = useState({

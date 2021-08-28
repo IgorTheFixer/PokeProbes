@@ -1,5 +1,5 @@
 import React from 'react'
-//import MysteryPokemon from '../../../assets/images/mystery-pokemon.jpg'
+import MysteryPokemon from '../../../assets/images/mystery-pokemon.jpg'
 import {Link} from 'react-router-dom'
 
 const PokemonTile = (props) => {
