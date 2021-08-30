@@ -18,8 +18,6 @@ To view the app in development locally at https://localhost:3000/ Run the follow
 
 $ rails s $ yarn start
 
-*inspired by BlathersBlabber
-
 In Progress Features:
 
 PokeAPI Integration
