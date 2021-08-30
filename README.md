@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dependencies:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby (greater than v2.7.3)
+Postgres (greater than v13.2)
+git clone https://github.com/Jgorin/Blathers-Blabber.git
+yarn install
+bundle install
+bundle exec rake db:create
+In a separate terminal window, run bundle exec rails s. In another terminal window, run yarn run start.
