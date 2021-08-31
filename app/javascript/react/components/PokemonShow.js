@@ -20,6 +20,16 @@ const PokemonShow = props => {
     role: ""
   })
 
+  const [type, setType] = useState("Click For Pokemon's Type!")
+  const [typeTwo, setTypeTwo] = useState("")
+
+  const [image, setImage] = useState("unknown.webp")
+
+  const typeClick = event => {
+    event.preventDefault()
+    fetchType(); 
+  }
+
   const submittedHandler = review => {
     postReview(review)
   }
@@ -50,8 +60,24 @@ const PokemonShow = props => {
   }
 
   useEffect(() => {
-    fetchPokemon()
+    fetchPokemon();
   }, [])
+
+  const fetchType = async () =>{
+    try{
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name.toLowerCase()}`)
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        throw new Error(errorMessage)
+      }
+
+      const responseBody = await response.json()
+      setType(responseBody.types[0].type.name)
+      setImage(`${responseBody.types[0].type.name}.webp`)
+    } catch (error) {
+      console.error(`Error in Fetch: ${error.message}`)
+    }
+  }
 
   const postReview = async formPayload => {
     try {
@@ -130,10 +156,13 @@ const PokemonShow = props => {
   return (
     <div className="grid-container">
       <div className="grid-x">
-        <div className="cell small-12 medium-6">
+        <div onClick={typeClick} className="cell small-12 medium-6">
           {pokemonImg}
           <h1>{pokemon.name}</h1>
           <p>{pokemon.body}</p>
+          <h2>Type</h2>
+          <h3>{type}</h3>
+          <img src={`../${image}`}/>
           <PokemonReviewForm submittedHandler={submittedHandler} />
         </div>
         <div className="cell small-12 medium-6">
