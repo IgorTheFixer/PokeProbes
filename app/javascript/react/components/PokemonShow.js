@@ -156,12 +156,12 @@ const PokemonShow = props => {
   return (
     <div className="grid-container">
       <div className="grid-x">
-        <div onClick={typeClick} className="cell small-12 medium-6">
+        <div className="cell small-12 medium-6">
           {pokemonImg}
           <h1>{pokemon.name}</h1>
           <p>{pokemon.body}</p>
           <h2>Type</h2>
-          <h3>{type}</h3>
+          <h3 onClick={typeClick}>{type}</h3>
           <img src={`../${image}`}/>
           <PokemonReviewForm submittedHandler={submittedHandler} />
         </div>
